@@ -8,28 +8,31 @@ int num[10000];
 
 void dfs2(int depth)
 {
-    if(depth > cnt)
+    if (depth > cnt)
     {
-        if(val <= now) vis[val] = true;
+        if (val <= now)
+            vis[val] = true;
         return;
     }
-    for(int i=0; i<=1; i++)
+    for (int i = 0; i <= 1; i++)
     {
-        if(i) val += num[depth];
+        if (i)
+            val += num[depth];
         dfs2(depth + 1);
-        if(i) val -= num[depth];
+        if (i)
+            val -= num[depth];
     }
 }
 
 void dfs(int depth)
 {
-    if(depth > now)
+    if (depth > now)
     {
         memset(vis, 0, sizeof(vis));
         dfs2(1);
-        if(!vis[now])
+        if (!vis[now])
         {
-            for(int i=1; i<=cnt; i++)
+            for (int i = 1; i <= cnt; i++)
             {
                 printf("%d ", num[i]);
             }
@@ -37,18 +40,19 @@ void dfs(int depth)
         }
         return;
     }
-    for(int i=0; i<=1; i++)
+    for (int i = 0; i <= 1; i++)
     {
         used[depth] = i;
-        if(used[depth]) num[++cnt] = depth;
+        if (used[depth])
+            num[++cnt] = depth;
         dfs(depth + 1);
-        if(used[depth]) --cnt;
+        if (used[depth])
+            --cnt;
     }
 }
 
 void check()
 {
-    
 
     int max = 0;
     dfs(1);
@@ -61,7 +65,7 @@ void check()
 
 int main()
 {
-    for(int i=1; i<=15; i++)
+    for (int i = 1; i <= 15; i++)
     {
         now = i;
         printf("%d:\n", i);

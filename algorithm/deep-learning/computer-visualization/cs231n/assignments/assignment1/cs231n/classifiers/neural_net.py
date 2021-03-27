@@ -102,6 +102,16 @@ class TwoLayerNet(object):
         #############################################################################
         # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
+        num_train = X.shape[0]
+
+        scores -= np.max(scores, axis=1)[:, np.newaxis]
+        correct_class_score = scores[range(num_train), y]
+        exp_score = np.exp(scores)
+        sum_exp_score = np.sum(exp_score, axis=1)
+
+        loss = np.sum(np.log(sum_exp_score) - correct_class_score)
+        loss /= num_train
+        loss += 0.5 * reg * np.sum(W * W)
         pass
 
         # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
