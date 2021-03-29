@@ -1,8 +1,10 @@
 #include <iostream>
-#include <cstdio>
-#include "WinRandom.h"
+#include <string>
+#include <sstream>
+#include <ctime>
 #include <algorithm>
 using namespace std;
+stringstream ss;
 
 struct Node
 {
@@ -13,13 +15,21 @@ struct Node
     }
 } A[100];
 
-int main()
+int main(int argc, char *argv[])
 {
-    WinRandom R;
+    int seed = time(NULL);
+    if (argc > 1) //如果有参数
+    {
+        ss.clear();
+        ss << argv[1];
+        ss >> seed; //把参数转换成整数赋值给seed
+    }
+    srand(seed);
+
     int n = 10;
     for (int i = 1; i <= n; i++)
     {
-        A[i] = (Node){R.randInt(), i};
+        A[i] = (Node){rand(), i};
         // printf("%d ", A[i].data);
         // printf("%d ", R.randInt());
     }
@@ -29,5 +39,6 @@ int main()
     {
         printf("%d ", A[i].loc);
     }
+
     return 0;
 }
