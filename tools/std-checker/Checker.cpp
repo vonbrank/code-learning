@@ -14,8 +14,8 @@ int main()
     scanf("%d", &type);
 
     int t = 100000;
-    string Std = R"("D:\Users\VonBrank\Documents\GitHub\code-learning\practise\codeforeces\contests\Codeforces-Round-#706-Div.2\D.Lets-Go-Hiking-[std].exe")";
-    string Mtd = R"("D:\Users\VonBrank\Documents\GitHub\code-learning\practise\codeforeces\contests\Codeforces-Round-#706-Div.2\D.Lets-Go-Hiking-[After-Contest].exe")";
+    string Std = R"("D:\Users\VonBrank\Documents\GitHub\code-learning\practise\luogu\contest\LGR-084\A.T173579-StickSuger-violent.exe")";
+    string Mtd = R"("D:\Users\VonBrank\Documents\GitHub\code-learning\practise\luogu\contest\LGR-084\A.T173579-StickSuger.exe")";
     string DataGenerator;
     if (type == 3)
         DataGenerator = R"("D:\Users\VonBrank\Documents\GitHub\code-learning\tools\std-checker\DataGenerator_WR.exe")";
