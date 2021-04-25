@@ -1,4 +1,5 @@
 *.exe
+*.i
 /.vscode/
 /algorithm/deep-learning/computer-visualization/cs231n/datasets/cifar-10-batches-py/
 /language/python/opencv/footage/
