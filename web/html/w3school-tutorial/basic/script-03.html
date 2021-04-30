@@ -1,0 +1,28 @@
+<!-- JavaScript 能够更改内容： -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>使用 JavaScript 更改文本</h1>
+
+    <p>本例把 "Hello JavaScript!" 写入 id="demo" 的 HTML 元素内：</p>
+
+    <button type="button" onclick="func()">Click Me!!!</button>
+
+    <p id="demo">This is a demo.</p>
+
+    <script>
+        function func() {
+            document.getElementById('demo').innerHTML = "Hello JavaScript!";
+        }
+    </script>
+</body>
+
+</html>

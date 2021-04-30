@@ -1,0 +1,34 @@
+<!-- JavaScript 能够更改属性： -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>在这里，JavaScript 更改了图像的 src 属性。</p>
+
+    <img src="../../../image/eg_bulboff.gif" alt="eg_bulboff" id="myImage">
+
+    <p>
+        <button type="button" onclick="light(1)">开灯</button>
+        <button type="button" onclick="light(0)">关灯</button>
+    </p>
+
+    <script>
+        function light(state) {
+            var pic;
+            if (state)
+                pic = "../../../image/eg_bulbon.gif";
+            else
+                pic = "../../../image/eg_bulboff.gif"
+            document.getElementById("myImage").src = pic;
+        }
+    </script>
+</body>
+
+</html>
