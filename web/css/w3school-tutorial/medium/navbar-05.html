@@ -1,0 +1,109 @@
+<!-- CSS 水平导航栏 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul a {
+            text-decoration: none;
+
+        }
+
+        nav.horizontal-inline li {
+            display: inline;
+        }
+
+        nav.horizontal-inline li a {
+            /* display: block; */
+            padding: 8px;
+            background-color: dodgerblue;
+            color: white;
+        }
+
+        nav.horizontal-float ul {
+            overflow: hidden;
+        }
+
+        nav.horizontal-float ul li {
+            float: left;
+            /*使用 float 使块元素滑动为彼此相邻*/
+        }
+
+        nav.horizontal-float ul li a {
+            display: block;
+            padding: 8px;
+            background-color: dodgerblue;
+            color: white;
+
+        }
+
+        nav.horizontal-final ul {
+            overflow: hidden;
+            background-color: dodgerblue;
+        }
+
+        nav.horizontal-final ul li {
+            float: left;
+            /*使用 float 使块元素滑动为彼此相邻*/
+        }
+
+        nav.horizontal-final ul li a {
+            display: block;
+            padding: 14px 16px;
+            color: white;
+        }
+
+
+        nav.horizontal-final ul li a:hover,
+        nav.horizontal-final ul li a:active {
+            background-color: tomato;
+        }
+
+        nav.horizontal-final ul li a.active {
+            background-color: SlateBlue;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="horizontal-inline">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <nav class="horizontal-float">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <nav class="horizontal-final">
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li style="float: right;"><a href="#about">About</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

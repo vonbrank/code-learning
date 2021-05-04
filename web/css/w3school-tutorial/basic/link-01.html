@@ -1,0 +1,34 @@
+<!-- CSS 根据状态设置链接 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a.test {
+            text-decoration: none;
+        }
+
+        a.test:link,
+        a.test:visited {
+            color: dodgerblue;
+        }
+
+        a.test:hover,
+        a.test:active {
+            color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS 链接</h1>
+    <a href="http://cn.bing.com" target="_blank" rel="noopener noreferrer" class="test">This is a link.</a>
+    <p><b>注释：</b>在 CSS 定义中，a:hover 必须位于 a:link 和 a:visited 之后才能生效。</p>
+    <p><b>注释：</b>在 CSS 定义中，a:active 必须位于 a:hover 之后才能生效。</p>
+</body>
+
+</html>
