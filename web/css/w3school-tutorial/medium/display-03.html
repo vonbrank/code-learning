@@ -1,0 +1,45 @@
+<!-- 结合使用 CSS 和 JavaScript 来显示内容 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        div[id="js-control"] *[id="flip"],
+        div[id="js-control"] div[id="panel"] {
+            padding: 10px;
+            text-align: center;
+            background-color: dodgerblue;
+            color: white;
+            margin: auto;
+            border: 1px solid black;
+        }
+
+        div[id="js-control"] div[id="panel"] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="js-control">
+        <h3 id="flip" onclick="display_panel()">点我！点我！点我！</h3>
+        <div id="panel">
+            <!-- <h1>I <i class="fas fa-heart" style="color: #F3473C;"></i> Louis!!!</h1> -->
+            <h1>I <span style="color: #F3473C; font-size: 40px;">&#9829;</span> Louis!!!</h1>
+        </div>
+        <script>
+            function display_panel() {
+                if (document.getElementById("panel").style.display != "block")
+                    document.getElementById("panel").style.display = "block";
+                else document.getElementById("panel").style.display = "none";
+            }
+        </script>
+    </div>
+</body>
+
+</html>

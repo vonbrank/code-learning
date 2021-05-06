@@ -2,6 +2,14 @@
 
 ### CSS 中级教程
 
+#### CSS 布局 - display 属性
+
+[实例-01](./display-01.html)
+
+#### CSS 布局 - width 和 max-width
+
+[实例-01](./max-width-01.html)
+
 #### CSS 导航栏
 
 [实例-01](./navbar-01.html)
