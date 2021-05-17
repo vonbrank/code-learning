@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.border-bottom-transition {
+            display: inline-block;
+            padding: 0.5em;
+            background-color: #B5BDC0;
+            color: white;
+            /* border-bottom: solid red; */
+            /* border: solid; */
+            /* transition: border-bottom 1s; */
+        }
+
+        div.border-bottom-transition::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: auto;
+            bottom: 0;
+            right: auto;
+            height: 0.3em;
+            width: 0%;
+            background-color: #8796a9;
+            transition: width 0.5s;
+        }
+
+        div.border-bottom-transition:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>transition 属性</h1>
+
+    <p>请把鼠标悬停在下面的 div 元素上，来查看过渡效果：</p>
+
+    <div style="position: relative; display: inline-block;">
+        <div class="border-bottom-transition">
+            transition
+        </div>
+    </div>
+
+</body>
+
+</html>

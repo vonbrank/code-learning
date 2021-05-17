@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background-color: #9933CA;
+            padding: 2em;
+            color: white;
+        }
+
+        /* .row {
+            border: solid black;
+        } */
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        [class*="col-"] {
+            float: left;
+            /* padding: 15px; */
+        }
+
+        /* 针对手机： */
+        [class*="col-"] {
+            width: 100%;
+        }
+
+        @media only screen and (min-width: 600px) {
+
+            /* 针对平板电脑： */
+            .col-s-1 {
+                width: 8.33%;
+            }
+
+            .col-s-2 {
+                width: 16.66%;
+            }
+
+            .col-s-3 {
+                width: 25%;
+            }
+
+            .col-s-4 {
+                width: 33.33%;
+            }
+
+            .col-s-5 {
+                width: 41.66%;
+            }
+
+            .col-s-6 {
+                width: 50%;
+            }
+
+            .col-s-7 {
+                width: 58.33%;
+            }
+
+            .col-s-8 {
+                width: 66.66%;
+            }
+
+            .col-s-9 {
+                width: 75%;
+            }
+
+            .col-s-10 {
+                width: 83.33%;
+            }
+
+            .col-s-11 {
+                width: 91.66%;
+            }
+
+            .col-s-12 {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+
+            /* 针对桌面： */
+            .col-1 {
+                width: 8.33%;
+            }
+
+            .col-2 {
+                width: 16.66%;
+            }
+
+            .col-3 {
+                width: 25%;
+            }
+
+            .col-4 {
+                width: 33.33%;
+            }
+
+            .col-5 {
+                width: 41.66%;
+            }
+
+            .col-6 {
+                width: 50%;
+            }
+
+            .col-7 {
+                width: 58.33%;
+            }
+
+            .col-8 {
+                width: 66.66%;
+            }
+
+            .col-9 {
+                width: 75%;
+            }
+
+            .col-10 {
+                width: 83.33%;
+            }
+
+            .col-11 {
+                width: 91.66%;
+            }
+
+            .col-12 {
+                width: 100%;
+            }
+        }
+
+        /* .menu {
+            border: solid black;
+        } */
+
+        ul.menu-contain>li {
+            padding: 0.5em;
+            margin: 0.5em 0.5em;
+            background-color: #33b5e5;
+            color: white;
+            list-style: none;
+        }
+
+        ul.menu-contain>li:hover {
+            background-color: #3acaff;
+        }
+
+        .content-01 {
+            padding: 1em;
+        }
+
+        .side-menu {
+
+            padding: 1em;
+        }
+
+        .side-menu-item {
+            background-color: #9933CA;
+            padding: 1em;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <header class="header">
+            <h1>Shanghai</h1>
+        </header>
+    </div>
+    <div class="row">
+        <nav class="col-3 col-s-4  menu">
+            <ul class="menu-contain">
+                <li>The Flight</li>
+                <li>The City</li>
+                <li>The Island</li>
+                <li>The Food</li>
+            </ul>
+        </nav>
+        <section class="col-6 col-s-8 content-01">
+            <h1>The City</h1>
+            <p>Shanghai is one of the four direct-administered municipalities of the People's Republic of China. Welcome
+                to Shanghai!
+            </p>
+            <p>请调整浏览器窗口的大小，来查看内容如何响应调整大小。</p>
+        </section>
+        <section class="col-3 col-s-12 side-menu">
+            <div class="side-menu-item">
+                <h1>side-menu</h1>
+                <p>欢迎来到“夜之城
+                </p>
+                <p>通过GEFORCE RTX 30系显卡体验光线追踪和DLSS技术</p>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
