@@ -1,32 +1,69 @@
 #include <iostream>
 #include <cstdio>
 using namespace std;
-int n;
-bool used[100];
-int now[100];
-void dfs(int depth)
+const int maxn = 1050;
+int n, cc, tot, top, scc, st, end;
+int head[maxn], dfn[maxn], low[maxn], stk[maxn], belong[maxn];
+bool instk[maxn];
+struct Node
 {
-    if(depth > n)
+    int to, next, from;
+} edge[maxn * maxn];
+void addedge(int u, int v)
+{
+    ++cc;
+    edge[cc].from = u;
+    edge[cc].to = v;
+    edge[cc].next = head[u];
+    head[u] = cc;
+}
+void tarjan(int u)
+{
+    low[u] = dfn[u] = ++tot;
+    stk[++top] = u;
+    instk[u] = true;
+    for (int i = head[u]; i; i = edge[i].next)
     {
-        for(int i=1; i<=n; i++)
+        int v = edge[i].to;
+        if (!dfn[v])
         {
-            printf("%d ", now[i]);
+            tarjan(v);
+            low[u] = min(low[u], low[v]);
         }
-        puts("");
-        return;
+        else if (instk[v])
+        {
+            low[u] = min(low[u], dfn[v]);
+        }
     }
-    for(int i=1; i<=n; i++)
+    if (dfn[u] == low[u])
     {
-        if(used[i]) continue;
-        used[i] = true;
-        now[depth] = i;
-        dfs(depth + 1);
-        used[i] = false;
+        ++scc;
+        int v;
+        do
+        {
+            v = stk[top--];
+            belong[v] = scc;
+            instk[v] = false;
+        } while (v != u);
     }
 }
 int main()
 {
     scanf("%d", &n);
-    dfs(1);
+    for (int i = 1; i <= n; i++)
+    {
+        int to;
+        scanf("%d", &to);
+        while (to != 0)
+        {
+            addedge(i, to);
+            scanf("%d", &to);
+        }
+    }
+    for (int i = 1; i <= n; i++)
+    {
+        if (!dfn[i])
+            tarjan(i);
+    }
     return 0;
 }

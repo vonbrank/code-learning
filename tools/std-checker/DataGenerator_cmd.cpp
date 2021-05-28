@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
         ss >> seed; //把参数转换成整数赋值给seed
     }
     srand(seed);
-
+    //用 rand() 来返回一个随机的 int
     int n = 10;
     for (int i = 1; i <= n; i++)
     {

@@ -6,16 +6,16 @@ using namespace std;
 
 int main()
 {
-    int type;
-    printf("input random generator type:\n");
-    printf("1: naive\n");
-    printf("2: cmdRandom\n");
-    printf("3: WinRandom\n");
-    scanf("%d", &type);
+    int type = 3;
+    // printf("input random generator type:\n");
+    // printf("1: naive\n");
+    // printf("2: cmdRandom\n");
+    // printf("3: WinRandom\n");
+    // scanf("%d", &type);
 
-    int t = 100000;
-    string Std = R"("D:\Users\VonBrank\Documents\GitHub\code-learning\practise\luogu\contest\LGR-084\A.T173579-StickSuger-violent.exe")";
-    string Mtd = R"("D:\Users\VonBrank\Documents\GitHub\code-learning\practise\luogu\contest\LGR-084\A.T173579-StickSuger.exe")";
+    int t = 2000;
+    string Std = R"("D:\Users\VonBrank\Documents\GitHub\code-learning\practise\luogu\P1932_violent.exe")";
+    string Mtd = R"("D:\Users\VonBrank\Documents\GitHub\code-learning\practise\luogu\P1932.exe")";
     string DataGenerator;
     if (type == 3)
         DataGenerator = R"("D:\Users\VonBrank\Documents\GitHub\code-learning\tools\std-checker\DataGenerator_WR.exe")";
