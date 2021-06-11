@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <script>
+        function setTextValue() {
+            var elememt = document.querySelectorAll("body > div.container.h1-h6 > *");
+            for (var i = 0; i < elememt.length; i++) {
+                elememt[i].innerHTML = elememt[i].tagName + ' ' + elememt[i].innerHTML;
+            }
+        }
+        function addLoadEvent(func) {
+            var oldonload = window.onload;
+            if (typeof oldonload != 'function') {
+                window.onload = func;
+            }
+            else {
+                window.onload = function () {
+                    oldonload();
+                    func();
+                }
+            }
+        }
+        addLoadEvent(setTextValue);
+    </script>
+</head>
+
+<body>
+
+    <div class="container h1-h6">
+        <h1>Bootstrap 标题 </h1>
+        <h2>Bootstrap 标题 </h2>
+        <h3>Bootstrap 标题 </h3>
+        <h4>Bootstrap 标题 </h4>
+        <h5>Bootstrap 标题 </h5>
+        <h6>Bootstrap 标题 </h6>
+        <h7>Bootstrap 标题 </h7>
+
+    </div>
+    <div class="container">
+        <h1>Display 标题</h1>
+        <h1 class="display-1">Display 1</h1>
+        <h1 class="display-2">Display 2</h1>
+        <h1 class="display-3">Display 3</h1>
+        <h1 class="display-4">Display 4</h1>
+        <h2 class="display-4">Display 4</h2>
+        <!-- <h1 class="display-5">Display 5</h1> -->
+    </div>
+    <div class="container">
+        <h1> &lt;small&gt; </h1>
+        <h1>h1 标题 <small>副标题</small></h1>
+    </div>
+    <div class="container">
+        <h1>高亮文本</h1>
+        <p>使用 mark 元素来 <mark>高亮</mark> 文本</p>
+    </div>
+    <div class="container">
+        <h1>代码片段</h1>
+        <p>可以将一些代码元素放到 code 元素里面:</p>
+        <code>
+            &lt;script src=&quot;https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+            &lt;script src=&quot;https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js&quot;&gt;&lt;/script&gt;
+
+            &lt;script src=&quot;https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+        </code>
+    </div>
+    <div class="container">
+        <h1>Keyboard Inputs</h1>
+        <p>To indicate input that is typically entered via the keyboard, use the kbd element:</p>
+        <kbd>Ctrl + P</kbd>
+    </div>
+
+</body>
+
+
+</html>

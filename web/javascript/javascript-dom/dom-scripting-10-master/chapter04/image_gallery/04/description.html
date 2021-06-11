@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Image Gallery</title>
+    <!-- <script type="text/javascript" src="scripts/showPic.js"></script> -->
+    <script>
+
+    </script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            background-color: #ccc;
+            margin: 1em 10%;
+        }
+
+        a {
+            color: #c60;
+            background-color: transparent;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        ul {
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+        }
+
+        li {
+            padding: 1em;
+            list-style: none;
+        }
+
+        img {
+            display: block;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Snapshots</h1>
+    <ul>
+        <li>
+            <a href="images/fireworks.jpg" title="A fireworks display"
+                onclick="showPic(this); return false;">Fireworks</a>
+        </li>
+        <li>
+            <a href="images/coffee.jpg" title="A cup of black coffee" onclick="showPic(this); return false;">Coffee</a>
+        </li>
+        <li>
+            <a href="images/rose.jpg" title="A red, red rose" onclick="showPic(this); return false;">Rose</a>
+        </li>
+        <li>
+            <a href="images/bigben.jpg" title="The famous clock" onclick="showPic(this); return false;">Big Ben</a>
+        </li>
+    </ul>
+    <img id="placeholder" src="images/placeholder.gif" alt="my image gallery" />
+    <p id="description">Choose an image.</p>
+    <script>
+        function showPic(whichpic) {
+            var source = whichpic.getAttribute("href");
+            var placeholder = document.getElementById("placeholder");
+            placeholder.setAttribute("src", source);
+            var text = whichpic.getAttribute("title");
+            var description = document.getElementById("description");
+            // alert(description.nodeValue);
+            // alert(description.childNodes[0].nodeValue);
+            description.childNodes[0].nodeValue = text;
+        }
+
+    </script>
+    <!-- <p id="description">Choose an image.</p> -->
+</body>
+
+</html>
