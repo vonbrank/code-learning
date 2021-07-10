@@ -1,6 +1,6 @@
 import numpy as np
 
-f = open(r'D:\Users\VonBrank\Documents\GitHub\code-learning\tools\build_nnez_building_offset\qitian_building_scene_02.in', 'r')
+f = open(r'D:\Users\VonBrank\Documents\GitHub\code-learning\tools\build_nnez_building_offset\qitian_building_scene_01.in', 'r')
 
 A_offset = np.array([[-8, 104, 123]])
 B_offset = np.array([[1386, 138, 1262]])
