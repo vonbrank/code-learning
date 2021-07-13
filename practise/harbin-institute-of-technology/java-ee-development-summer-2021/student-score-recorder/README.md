@@ -1,14 +1,38 @@
-## Getting Started
+# 《基于Java EE平台的软件开发》实验报告
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## 实验1：对象和类
 
-## Folder Structure
+| 学号       | 姓名   | 得分 |
+| ---------- | ------ | ---- |
+| 120L021403 | 冯新航 |      |
 
-The workspace contains two folders by default, where:
+### 工程目录
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+```bash
+├─README.md        
+│  
+├─docs
+│    ├─testdata.in  
+│    ├─实验1任务.doc
+│    └─实验1报告.doc
+│      
+├─lib
+├─output
+│    ├─demo.png     
+│    └─run.txt
+│
+└─src
+    ├─App.java
+    ├─Test.java
+    │
+    └─com
+        └─vonbrank
+            └─StudentScoreRecorder
+                  ├─Course.java
+                  ├─SelectCourse.java
+                  └─Student.java
+```
 
-## Dependency Management
+### 程序详细运行过程及截图：
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+![demo.png](./output/demo.png)

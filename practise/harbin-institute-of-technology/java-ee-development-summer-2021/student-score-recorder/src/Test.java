@@ -4,7 +4,7 @@ import java.util.Random;
 
 /**
  * @author Von Brank
- * @version 0.0.1
+ * @version 0.2.0
  * @update [2021-07-13] [Von Brank]
  */
 
@@ -19,7 +19,7 @@ public class Test {
         Course[] courses = new Course[32];
         courses[0] = Course.createNewCourse("CS101", "Java", 3.0);
         courses[1] = Course.createNewCourse("CS102", "C++", 2.0);
-        courses[2] = Course.createNewCourse("CS103", "Python", 3.0);
+        // courses[2] = Course.createNewCourse("CS103", "Python", 3.0);
 
         SelectCourse[] selectCourses = new SelectCourse[2048];
         inputRealData(students, courses, selectCourses);
@@ -47,28 +47,30 @@ public class Test {
 
     }
 
-    private static void inputRandomData(Student[] students, Course[] courses, SelectCourse[] selectCourses) { // 数据就不输入了，直接随机生成了。这个Feature我最后还是咕了
+    private static void inputRandomData(Student[] students, Course[] courses, SelectCourse[] selectCourses) { // 随机生成了数据。这个Feature我最后还是咕了
 
     }
 
-    private static void inputRealData(Student[] students, Course[] courses, SelectCourse[] selectCourses) { // 你要真手动输入也行
+    private static void inputRealData(Student[] students, Course[] courses, SelectCourse[] selectCourses) { // 手动输入也行
         Scanner scanner = new Scanner(System.in);
         int cnt = 0;
+
+        System.out.printf("请输入每个同学的成绩，对于每个同学：\n");
+        System.out.printf("第一行一个整数 n ，表示 TA 参加的几门课程；\n");
+        System.out.printf("接下来 n 行输入一个字符串 s 和一个整数 a ，表示 TA 参加的每科的课程编号和成绩\n");
         for (int i = 0; i < students.length; i++) {
             if (students[i] == null)
                 return;
-            System.out.printf("请输入 %s 同学的学号：\n", students[i].getSname());
-            int sid = scanner.nextInt();
-            System.out.printf("请输入 %s 同学选课的门数：\n", students[i].getSname());
+            System.out.printf("请输入 %s 同学的成绩：\n", students[i].getSname());
+            int sid = students[i].getSid();
             int num = scanner.nextInt();
             for (int j = 1; j <= num; j++) {
-                System.out.printf("%s 同学选的第 %d 门课的编号是？\n", students[i].getSname(), j);
                 String cid = scanner.next();
-                System.out.printf("请输入 TA 这门课的成绩\n");
                 double score = scanner.nextInt();
                 cnt++;
                 selectCourses[cnt] = SelectCourse.createNewSelectCourse(sid, cid, score, students, courses);
             }
+            System.out.printf("\n");
         }
     }
 }
