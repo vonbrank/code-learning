@@ -6,6 +6,8 @@
 | ---------- | ------ | ---- |
 | 120L021403 | 冯新航 |      |
 
+在线阅读源码：**https://github.com/vonbrank/code-learning/tree/master/practise/harbin-institute-of-technology/java-ee-development-summer-2021/student-score-recorder**
+
 ### 工程目录
 
 ```bash
