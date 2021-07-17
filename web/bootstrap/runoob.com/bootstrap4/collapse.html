@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>简单的折叠</h2>
+        <p>点击按钮内容会再显示与隐藏之间切换。</p>
+        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">简单的折叠</button>
+        <br>
+        <a href="#demo" class="btn btn-primary" data-toggle="collapse">链接按钮</a>
+        <div id="demo" class="collapse show" style="border: solid;">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+        <br>
+
+
+        <div id="accordion">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="#collapse_01" class="card-link" data-toggle="collapse">选项一</a>
+                        </div>
+                        <div id="collapse_01" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Lorem Ipsum Text. Lorem Ipsum Text.
+                                    Lorem Ipsum Text.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="#collapse_02" class="card-link" data-toggle="collapse">选项一</a>
+                        </div>
+                        <div id="collapse_02" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Lorem Ipsum Text. Lorem Ipsum Text.
+                                    Lorem Ipsum Text.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="#collapse_03" class="card-link" data-toggle="collapse">选项一</a>
+                        </div>
+                        <div id="collapse_03" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Lorem Ipsum Text. Lorem Ipsum Text.
+                                    Lorem Ipsum Text.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div id="intel-menu">
+            <div class="btn-group">
+                <a href="#collapse_04" class="btn btn-primary" data-toggle="collapse">btn-01</a>
+                <a href="#collapse_05" class="btn btn-primary" data-toggle="collapse">btn-02</a>
+            </div>
+            <div class="collapse" id="collapse_04" data-parent="#intel-menu" style="border: solid;">
+                <p>Lorem Ipsum Text. Lorem Ipsum Text.
+                    Lorem Ipsum Text.</p>
+                <p>Lorem Ipsum Text. Lorem Ipsum Text.
+                    Lorem Ipsum Text.</p>
+                <p>Lorem Ipsum Text. Lorem Ipsum Text.
+                    Lorem Ipsum Text.</p>
+            </div>
+            <div class="collapse" id="collapse_05" data-parent="#intel-menu" style="border: solid;">
+                <p>Lorem Ipsum Text. Lorem Ipsum Text.
+                    Lorem Ipsum Text.</p>
+                <p>Lorem Ipsum Text. Lorem Ipsum Text.
+                    Lorem Ipsum Text.</p>
+                <p>Lorem Ipsum Text. Lorem Ipsum Text.
+                    Lorem Ipsum Text.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
